@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiki Servidor FTP</title>
+<link rel="stylesheet" href="..\assets\styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+  <body>
+<header>
+  <div class="header-content"> <img src="..\img\Logo_UVM.png" alt="Logo de la Wiki FTP" class="logo-left">
+      <h1>Servidor FTP</h1>
+      <div class="iconos-right"> 
+		  <a href="..\index.html"> 
+			<img src="..\img\iconos\house.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		  <img src="..\img\iconos\informacion.png" alt="Icono 2" class="icon" onclick="mostrarVentana()"> 
+		  <img src="..\img\iconos\notificacion.png" alt="Icono 3" class="icon" onclick="enviarmsj()"> 
+		  <img src="..\img\iconos\clip.png" alt="Icono 4" class="icon" id="uploadIcon"> 
+		  <a href="sesion.html"> 
+			<img src="..\img\iconos\usuario.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		</div>
+    </div>
+</header>
+<div class="container">
+  <nav class="sidebar">
+            <button class="dropdown-btn" >Menú</button>
+            <ul class="dropdown-content">
+                <li><a href="..\index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="funcionamiento.html">Funcionamiento</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="casos.html">Casos de Uso</a></li>
+                <li><a href="implementacion.html">Implementación</a></li>
+				<li><a href="recursos.html">Recursos adicionales</a></li>
+            </ul>
+        </nav>
+  <main>
+    <section class="display-flex" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+      <div> <img src="..\img\implementacion.jpg" class="intro"> </div>
+      <div style="font-size: 30px;">
+        <h1>Implementación</h1>
+      </div>
+      <div class="textpage">
+        <h2>Implementación Práctica</h2>
+
+    <h3>Instalación y configuración de un servidor FTP</h3>
+    <p>Para instalar y configurar un servidor FTP, es necesario elegir el software adecuado según el sistema operativo y las necesidades del usuario.</p>
+    
+    <h4>Ejemplo: Instalación de FileZilla Server</h4>
+    <p><strong>Requisitos previos:</strong></p>
+    <ul>
+        <li>Sistema operativo Windows (7, 10, 11 o Server).</li>
+        <li>Acceso de administrador.</li>
+    </ul>
+
+    <h4>Pasos de instalación:</h4>
+    <ol>
+        <li>Ir al sitio oficial: <a href="https://filezilla-project.org/" target="_blank">https://filezilla-project.org/</a> y descargar FileZilla Server.</li>
+        <li>Ejecutar el instalador y seguir las instrucciones.</li>
+    </ol>
+
+    <h4>Configuración del servidor:</h4>
+    <ul>
+        <li>Iniciar FileZilla Server y definir el puerto de escucha (por defecto 21).</li>
+        <li>Crear usuarios y asignarles permisos en la pestaña <strong>“Users”</strong>.</li>
+    </ul>
+
+    <h4>Abrir puertos en el firewall:</h4>
+    <ul>
+        <li>Permitir conexiones en el puerto 21 (FTP) y puertos pasivos en el firewall de Windows.</li>
+        <li>Comando en PowerShell para abrir el puerto:<br>
+            <code>netsh advfirewall firewall add rule name="FTP" dir=in action=allow protocol=TCP localport=21</code>
+        </li>
+    </ul>
+
+    <h4>Probar la conexión FTP:</h4>
+    <p>Usar FileZilla Client u otro cliente FTP para probar la conexión ingresando:</p>
+    <ul>
+        <li><strong>Servidor:</strong> localhost</li>
+        <li><strong>Usuario y contraseña:</strong> los definidos en la configuración.</li>
+    </ul>
+
+    <h3>Uso de Dreamweaver para conectarse a un servidor FTP y subir archivos</h3>
+    <p>Adobe Dreamweaver facilita la administración de sitios web permitiendo conectarse a un servidor FTP y subir archivos directamente desde su entorno.</p>
+    <p>Esto es útil para actualizar sitios web en servidores de hosting sin necesidad de usar clientes FTP externos como FileZilla.</p>
+
+      </div>
+	  
+	  <div>
+	  <img src="..\img\implementacion2.jpg" class="imgfunc">
+	  </div>
+    </section>
+  </main>
+</div>
+<footer>
+  <p>&copy; 2025 Wiki Servidor FTP | Todos los derechos reservados</p>
+</footer>
+<script src="..\assets\script.js"></script>
+</body>
+</html>

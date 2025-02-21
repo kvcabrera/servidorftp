@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiki Servidor FTP</title>
+<link rel="stylesheet" href="..\assets\styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+  <body>
+<header>
+  <div class="header-content"> <img src="..\img\Logo_UVM.png" alt="Logo de la Wiki FTP" class="logo-left">
+      <h1>Servidor FTP</h1>
+      <div class="iconos-right"> 
+		  <a href="..\index.html"> 
+			<img src="..\img\iconos\house.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		  <img src="..\img\iconos\informacion.png" alt="Icono 2" class="icon" onclick="mostrarVentana()"> 
+		  <img src="..\img\iconos\notificacion.png" alt="Icono 3" class="icon" onclick="enviarmsj()"> 
+		  <img src="..\img\iconos\clip.png" alt="Icono 4" class="icon" id="uploadIcon"> 
+		  <a href="sesion.html"> 
+			<img src="..\img\iconos\usuario.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		</div>
+    </div>
+</header>
+<div class="container">
+  <nav class="sidebar">
+    <button class="dropdown-btn" >Menú</button>
+    <ul class="dropdown-content">
+      <li><a href="..\index.html">Inicio</a></li>
+      <li><a href="introduccion.html">Introducción</a></li>
+      <li><a href="funcionamiento.html">Funcionamiento</a></li>
+      <li><a href="herramientas.html">Herramientas</a></li>
+      <li><a href="casos.html">Casos de Uso</a></li>
+      <li><a href="implementacion.html">Implementación</a></li>
+      <li><a href="recursos.html">Recursos adicionales</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="display-flex" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+      <div> <img src="..\img\funcionamiento.jpg" class="intro"> </div>
+      <div style="font-size: 30px;">
+        <h1>Funcionamiento</h1>
+      </div>
+      <div class="textpage">
+        <p>
+        <h1> Arquitectura cliente-servidor </h1>
+        Es un modelo de comunicación en redes donde un cliente solicita
+        servicios o recursos a un servidor, el cual procesa la solicitud y
+        responde con la información requerida. Este modelo es ampliamente
+        utilizado en aplicaciones web, bases de datos y protocolos como FTP,
+        HTTP y SMTP.
+        </p>
+        <p>
+        <h1>Tipos de conexiones (Activa vs. Pasiva)</h1>
+        El protocolo FTP utiliza dos canales para la comunicación entre el
+        cliente y el servidor : <br>
+        <br>
+        1.- Canal de control (puerto 21) → Para enviar comandos y recibir
+        respuestas. <br>
+        2.- Canal de datos (puerto 20 o dinámico) → Para transferir archivos.
+        Dependiendo de cómo se establece el canal de datos, FTP puede
+        operar en modo activo o pasivo <br>
+        <br>
+        <strong> Modo Activo </strong> <br>
+        ▪ El cliente inicia la conexión con el servidor a través del puerto 21
+        (canal de control).
+        ▪ El servidor inicia la conexión de datos desde el puerto 20 hacia un
+        puerto aleatorio del cliente.
+        ▪ En este caso se pueden presentar algunos problemas, ya que hay
+        muchos cortafuegos y enrutadores modernos bloquean
+        conexiones entrantes no solicitadas, lo que puede causar fallos en
+        la transferencia. <br>
+        <br>
+        <strong>Modo Pasivo </strong> <br>
+        ▪ El cliente se conecta al servidor en el puerto 21 (canal de control).
+        ▪ En lugar de que el servidor inicie la conexión de datos, el cliente la
+        establece en un puerto dinámico que el servidor indica.
+        ▪ Este modo tiene la ventaja de que funciona mejor con firewalls y
+        NAT, ya que todas las conexiones son iniciadas por el cliente.
+        • Seguridad en FTP (FTPS y SFTP).
+        </p>
+	  <p>
+	  
+	  <h1>Seguridad en FTP (FTPS y SFTP)</h1>
+    <p>El protocolo FTP estándar no cifra la información, lo que lo hace vulnerable a ataques como la intercepción de datos (sniffing) y ataques “man-in-the-middle”. Para mejorar la seguridad en la transferencia de archivos, se desarrollaron los siguientes protocolos:</p>
+
+	  
+	  <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+  
+  <div style="flex: 1; padding-right: 20px;">
+    <h2>FTPS (FTP Seguro)</h2>
+    <ul>
+      <li>Es una extorsión de FTP que agrega cifrado SSL/TLS para proteger la conexión.</li>
+      <li>Basado en el protocolo FTP tradicional, pero con autenticación segura.</li>
+      <li>Es compatible con clientes y servidores FTP tradicionales con soporte para SSL/TLS.</li>
+      <li>Modos de cifrado:
+        <ul>
+          <li><strong>Explícito:</strong> Requiere TLS.</li>
+          <li><strong>Implícito:</strong> TLS automático.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Desventajas:</h3>
+    <ul>
+      <li>Requiere la configuración de certificados SSL/TLS en el servidor.</li>
+      <li>Puede tener problemas con firewalls debido al uso de múltiples puertos.</li>
+    </ul>
+  </div>
+
+  <div style="flex: 0 0 auto;">
+    <img src="..\img\imgfunc2.jpg" class="imgfunc" style="max-width: 100%; height: auto;">
+  </div>
+</div>
+    
+
+    <h2>SFTP (Protocolo de transferencia de archivos SSH)</h2>
+    <ul>
+        <li>Es un protocolo totalmente diferente a FTP, basado en SSH (Secure Shell).</li>
+        <li>No usa FTP tradicional, sino que implementa su propia capa segura sobre SSH.</li>
+        <li>Utiliza un solo puerto (generalmente el puerto 22), lo que facilita la configuración en firewalls.</li>
+        <li>Usa autenticación con claves SSH en lugar de contraseñas.</li>
+    </ul>
+
+    <h3>Desventajas:</h3>
+    <ul>
+        <li>No es compatible con servidores FTP tradicionales (requiere un servidor SSH).</li>
+        <li>Puede ser más complejo de implementar en algunos entornos.</li>
+    </ul>
+	  </p>
+      </div>
+	  
+	  <div>
+	  <img src="..\img\imgfunc.jpg" class="imgfunc">
+	  </div>
+    </section>
+  </main>
+</div>
+<footer>
+  <p>&copy; 2025 Wiki Servidor FTP | Todos los derechos reservados</p>
+</footer>
+<script src="..\assets\script.js"></script>
+</body>
+</html>

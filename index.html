@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiki Servidor FTP</title>
+<link rel="stylesheet" href="assets\styles.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bodyFondo">
+<div>
+  <header>
+    <div class="header-content"> <img src="img\Logo_UVM.png" alt="Logo de la Wiki FTP" class="logo-left">
+      <h1>Servidor FTP</h1>
+      <div class="iconos-right"> 
+		  <a href="index.html"> 
+			<img src="img\iconos\house.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		  <img src="img\iconos\informacion.png" alt="Icono 2" class="icon" onclick="mostrarVentana()"> 
+		  <img src="img\iconos\notificacion.png" alt="Icono 3" class="icon" onclick="enviarmsj()"> 
+		  <img src="img\iconos\clip.png" alt="Icono 4" class="icon" id="uploadIcon"> 
+		  <a href="pages\sesion.html"> 
+			<img src="img\iconos\usuario.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		</div>
+    </div>
+  </header>
+  <div class="container">
+    <nav class="sidebar">
+      <button class="dropdown-btn">Menú</button>
+      <ul class="dropdown-content">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="pages\introduccion.html">Introducción</a></li>
+        <li><a href="pages\funcionamiento.html">Funcionamiento</a></li>
+        <li><a href="pages\herramientas.html">Herramientas</a></li>
+        <li><a href="pages\casos.html">Casos de Uso</a></li>
+        <li><a href="pages\implementacion.html">Implementación</a></li>
+        <li><a href="pages\recursos.html">Recursos adicionales</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+<div class="tittleIndex">
+  <h1>Explora el mundo del FTP</h1>
+</div>
+<script src="assets\script.js"></script>
+</body>
+</html>

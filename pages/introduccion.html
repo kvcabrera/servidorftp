@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Servidor FTP</title>
+    <link rel="stylesheet" href="..\assets\styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+	
+<body>
+	<header>
+        <div class="header-content"> <img src="..\img\Logo_UVM.png" alt="Logo de la Wiki FTP" class="logo-left">
+      <h1>Servidor FTP</h1>
+      <div class="iconos-right"> 
+		  <a href="..\index.html"> 
+			<img src="..\img\iconos\house.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		  <img src="..\img\iconos\informacion.png" alt="Icono 2" class="icon" onclick="mostrarVentana()"> 
+		  <img src="..\img\iconos\notificacion.png" alt="Icono 3" class="icon" onclick="enviarmsj()"> 
+		  <img src="..\img\iconos\clip.png" alt="Icono 4" class="icon" id="uploadIcon"> 
+		  <a href="sesion.html"> 
+			<img src="..\img\iconos\usuario.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		</div>
+    </div>
+    </header>
+    <div class="container">
+        
+        <nav class="sidebar">
+            <button class="dropdown-btn" >Menú</button>
+            <ul class="dropdown-content">
+                <li><a href="..\index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="funcionamiento.html">Funcionamiento</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="casos.html">Casos de Uso</a></li>
+                <li><a href="implementacion.html">Implementación</a></li>
+				<li><a href="recursos.html">Recursos adicionales</a></li>
+            </ul>
+        </nav>
+
+      
+        <main>
+    <section class="display-flex" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+
+        <div>
+            <img src="..\img\introduccion.jpg" class="intro">
+        </div>
+        <div style="font-size: 30px;">
+            <h1>Introducción</h1>
+        </div>
+        <div class="textpage">
+            	<p>
+                Un Servidor FTP (File Transfer Protocol) es un protocolo estándar de red utilizado para la transferencia de archivos entre un cliente y un servidor a través de una red, ya sea Internet o una red local (LAN). Este sistema es fundamental en entornos donde se requieren intercambios frecuentes de grandes volúmenes de datos. La utilidad del FTP se destaca principalmente en situaciones donde el tamaño de los archivos supera las limitaciones impuestas por los servicios de correo electrónico, como adjuntos pesados, o cuando se necesita compartir archivos de manera rápida, eficiente y segura, minimizando el riesgo de errores en la transmisión.
+				</p>
+				<p>
+				El FTP opera sobre el modelo cliente-servidor, en el cual un usuario (cliente) establece una conexión con un servidor remoto para cargar, descargar o gestionar archivos. A través de esta conexión, los archivos pueden transferirse de forma bidireccional, lo que facilita la distribución de datos sin comprometer la integridad del contenido.
+				</p>
+				<p>
+				Una de las características clave de FTP es su capacidad para mantener sesiones persistentes. Esto significa que el usuario puede continuar con la transferencia de archivos de manera eficiente incluso si hay interrupciones temporales en la conexión. Además, FTP ofrece opciones de seguridad, como autenticación mediante nombres de usuario y contraseñas, y en versiones más avanzadas, como FTPS (FTP Secure) y SFTP (SSH File Transfer Protocol), la protección de la transferencia de datos mediante cifrado.
+				</p>
+				<p>
+				En términos de aplicabilidad, el FTP es especialmente útil en entornos corporativos y servidores web, donde se necesita compartir grandes bases de datos, imágenes o contenido multimedia. A lo largo de este documento, exploraremos los principios fundamentales de cómo funciona FTP, sus diversas configuraciones y cómo puede ser implementado para optimizar flujos de trabajo y mejorar la gestión de datos en distintos escenarios profesionales. Además, aprenderás las mejores prácticas para configurar un servidor FTP seguro y cómo maximizar su rendimiento para garantizar transferencias rápidas y fiables.
+				</p>
+				<p>
+				En esta guía, conocerás qué es FTP, cómo funciona y cómo puedes usarlo para optimizar tu trabajo.
+				</p>   
+            
+        </div>
+    </section>
+</main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Wiki Servidor FTP | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="..\assets\script.js"></script>
+</body>
+</html>

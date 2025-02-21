@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Servidor FTP</title>
+    <link rel="stylesheet" href="..\assets\styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+	
+<body>
+	<header>
+        <div class="header-content"> <img src="..\img\Logo_UVM.png" alt="Logo de la Wiki FTP" class="logo-left">
+      <h1>Servidor FTP</h1>
+      <div class="iconos-right"> 
+		  <a href="..\index.html"> 
+			<img src="..\img\iconos\house.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		  <img src="..\img\iconos\informacion.png" alt="Icono 2" class="icon" onclick="mostrarVentana()"> 
+		  <img src="..\img\iconos\notificacion.png" alt="Icono 3" class="icon" onclick="enviarmsj()"> 
+		  <img src="..\img\iconos\clip.png" alt="Icono 4" class="icon" id="uploadIcon"> 
+		  <a href="sesion.html"> 
+			<img src="..\img\iconos\usuario.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		</div>
+    </div>
+    </header>
+    <div class="container">
+        
+        <nav class="sidebar">
+            <button class="dropdown-btn" >Menú</button>
+            <ul class="dropdown-content">
+                <li><a href="..\index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="funcionamiento.html">Funcionamiento</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="casos.html">Casos de Uso</a></li>
+                <li><a href="implementacion.html">Implementación</a></li>
+				<li><a href="recursos.html">Recursos adicionales</a></li>
+            </ul>
+        </nav>
+
+      
+        <main>
+    <section class="display-flex" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+
+        <div>
+            <video src="..\videos\herramientas.mp4" class="intro" controls autoplay muted loop></video>
+			 
+        </div>
+        <div style="font-size: 30px;">
+            <h1>Herramientas</h1>
+        </div>
+        <div class="textpage">
+            	<h2>4. Software y herramientas FTP</h2>
+
+    <h3>Clientes FTP populares</h3>
+    <ul>
+        <li>
+            <h4>FileZilla</h4>
+            <p>Compatible con Windows, macOS y Linux. Soporta los protocolos FTP, FTPS y SFTP.</p>
+            <p>Cuenta con una interfaz intuitiva y funcional, soporta múltiples conexiones y permite la reanudación de transferencias.</p>
+        </li>
+        <li>
+            <h4>WinSCP</h4>
+            <p>Compatible solo con Windows. Soporta los protocolos FTP, FTPS, SFTP y SCP.</p>
+            <p>Posee una interfaz de doble panel y está enfocado en la seguridad, con soporte para claves SSH.</p>
+        </li>
+        <li>
+            <h4>Cyberduck</h4>
+            <p>Compatible con Windows y macOS. Soporta los protocolos FTP, FTPS, SFTP, WebDAV y Cloud.</p>
+            <p>Cuenta con una interfaz minimalista y moderna, además de ser compatible con servicios en la nube.</p>
+        </li>
+    </ul>
+
+    <h3>Configuración de un servidor FTP</h3>
+    <p>Un servidor FTP permite a los usuarios conectarse de forma remota para subir, descargar y gestionar archivos.</p>
+    <p>La configuración varía según el software elegido, pero en general, el proceso implica instalación, configuración de permisos y seguridad.</p>
+
+    <h4>Algunos servidores FTP populares:</h4>
+    <ul>
+        <li>vsftpd</li>
+        <li>FileZilla Server</li>
+        <li>ProFTPD</li>
+    </ul> 
+        </div>
+		<div>
+	  <img src="..\img\herramientas2.jpg" class="imgfunc">
+	  </div>
+    </section>
+</main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Wiki Servidor FTP | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="..\assets\script.js"></script>
+</body>
+</html>

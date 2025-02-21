@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki Servidor FTP</title>
+    <link rel="stylesheet" href="..\assets\styles.css">
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="header-content"> <img src="..\img\Logo_UVM.png" alt="Logo de la Wiki FTP" class="logo-left">
+      <h1>Servidor FTP</h1>
+      <div class="iconos-right"> 
+		  <a href="..\index.html"> 
+			<img src="..\img\iconos\house.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		  <img src="..\img\iconos\informacion.png" alt="Icono 2" class="icon" onclick="mostrarVentana()"> 
+		  <img src="..\img\iconos\notificacion.png" alt="Icono 3" class="icon" onclick="enviarmsj()"> 
+		  <img src="..\img\iconos\clip.png" alt="Icono 4" class="icon" id="uploadIcon"> 
+		  <a href="sesion.html"> 
+			<img src="..\img\iconos\usuario.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		</div>
+    </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <button class="dropdown-btn" >Menú</button>
+            <ul class="dropdown-content">
+                <li><a href="..\index.html">Inicio</a></li>
+                <li><a href="introduccion.html">Introducción</a></li>
+                <li><a href="funcionamiento.html">Funcionamiento</a></li>
+                <li><a href="herramientas.html">Herramientas</a></li>
+                <li><a href="casos.html">Casos de Uso</a></li>
+                <li><a href="implementacion.html">Implementación</a></li>
+				<li><a href="recursos.html">Recursos adicionales</a></li>
+            </ul>
+        </nav>
+
+        <main>
+			<div class="titulo">
+                    <h1>¡Bienvenido!</h1>
+                </div>
+            <section class="login-section">
+				
+				<div>
+                    <img src="..\img\iconos\usuario.png" alt="Logo de inicio de sesión" class="login-logo">
+                    <h2>Mi Cuenta</h2>
+                </div>
+                <div class="login-form">
+                    <form>
+                        <label for="username">Usuario</label>
+                        <input type="text" id="username" name="username" required>
+
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" required>
+
+                        <button type="submit">Acceder</button>
+                        <button type="button">Registrarse</button>
+                    </form>
+                </div>
+                
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Wiki Servidor FTP | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="..\assets\script.js"></script>
+</body>
+</html>

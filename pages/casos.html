@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiki Servidor FTP</title>
+<link rel="stylesheet" href="..\assets\styles.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+  <body>
+<header>
+  <div class="header-content"> <img src="..\img\Logo_UVM.png" alt="Logo de la Wiki FTP" class="logo-left">
+      <h1>Servidor FTP</h1>
+      <div class="iconos-right"> 
+		  <a href="..\index.html"> 
+			<img src="..\img\iconos\house.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		  <img src="..\img\iconos\informacion.png" alt="Icono 2" class="icon" onclick="mostrarVentana()"> 
+		  <img src="..\img\iconos\notificacion.png" alt="Icono 3" class="icon" onclick="enviarmsj()"> 
+		  <img src="..\img\iconos\clip.png" alt="Icono 4" class="icon" id="uploadIcon"> 
+		  <a href="sesion.html"> 
+			<img src="..\img\iconos\usuario.png" alt="Icono 6" class="icon6"> 
+		  </a> 
+		</div>
+    </div>
+</header>
+<div class="container">
+  <nav class="sidebar">
+    <button class="dropdown-btn" >Menú</button>
+    <ul class="dropdown-content">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="introduccion.html">Introducción</a></li>
+      <li><a href="funcionamiento.html">Funcionamiento</a></li>
+      <li><a href="herramientas.html">Herramientas</a></li>
+      <li><a href="casos.html">Casos de Uso</a></li>
+      <li><a href="implementacion.html">Implementación</a></li>
+      <li><a href="recursos.html">Recursos adicionales</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="display-flex" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+      <div> <img src="..\img\casos.jpg" class="intro"> </div>
+      <div style="font-size: 30px;">
+        <h1>Casos de Uso</h1>
+      </div>
+      <div class="textpage">
+        <h2>Uso en empresas y hosting web</h2>
+    <p>El uso de FTP permite transferencias rápidas y organizadas de archivos dentro de redes corporativas y en la gestión de contenido en servidores web.</p>
+
+    <h3>FTP frente a otros métodos de transferencia</h3>
+    <ul>
+        <li>
+            <strong>FTP</strong>: Es útil para la gestión de archivos en servidores, pero necesita seguridad adicional con FTPS o SFTP.
+        </li>
+        <li>
+            <strong>HTTP/HTTPS</strong>: La mejor opción para descargas públicas y navegación web.
+        </li>
+        <li>
+            <strong>SCP</strong>: La opción más segura para transferencias de archivos en entornos Linux/Unix.
+        </li>
+    </ul>
+
+    <p><strong>¿Cuál elegir?</strong></p>
+    <ul>
+        <li>Si priorizas la seguridad, <strong>SCP</strong> es la mejor opción.</li>
+        <li>Si necesitas gestionar archivos en servidores web, <strong>FTP con FTPS/SFTP</strong> es ideal.</li>
+        <li>Para descargas públicas, <strong>HTTP/HTTPS</strong> es el estándar.</li>
+    </ul>
+
+      </div>
+	  
+	  <div>
+	  <img src="..\img\casos2.jpg" class="imgfunc">
+	  </div>
+    </section>
+  </main>
+</div>
+<footer>
+  <p>&copy; 2025 Wiki Servidor FTP | Todos los derechos reservados</p>
+</footer>
+<script src="..\assets\script.js"></script>
+</body>
+</html>
